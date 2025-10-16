@@ -64,6 +64,16 @@ public class StreamChallenges {
 //        3. Using the Streams API find the highest value in the list
 //        4. Using the Streams API find the lowest value in the list
 //        5. Print the two values
+    public static void taskD(){
+        List<Integer> nums = new ArrayList<>(List.of(10, 15, 0, 6, 11, -3));
+        nums.forEach(s -> System.out.print(s +" "));
+        int maxNum = nums.stream().max(Integer::compare).get();
+        int minNum = nums.stream().min(Integer::compare).get();
+
+        System.out.println(" ");
+        System.out.println("MAX NUMBER: " + maxNum);
+        System.out.println("MIN NUMBER: " + minNum);
+    }
 
 // ToDo E
 //        1. Create a list of Employees called employeeList
