@@ -135,6 +135,10 @@ public class StreamChallenges {
 
         System.out.println(cohort1.stream().findFirst());
         System.out.println(cohort1.stream().findAny());
+
+        List<Integer> nums = new ArrayList<>(List.of(1,2,3,4));
+        int sumofNumbers = nums.stream().reduce(0,Integer::sum);
+        System.out.println(sumofNumbers);
     }
 
 }
