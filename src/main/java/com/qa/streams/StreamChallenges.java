@@ -2,6 +2,7 @@ package com.qa.streams;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class StreamChallenges {
@@ -82,6 +83,33 @@ public class StreamChallenges {
 //        4. Using the Streams API summarize the salary statistics
 //        5. Using the Streams API summarize the totalDaysLeave statistics
 //        6. Experiment with filtering the list by name, age, salary and daysLeave
+    public static void taskE(){
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee("Daveraj", 35, 100000.5, 7L));
+        employeeList.add(new Employee("Maks", 45, 100000.6, 8L));
+
+        String age_summary =  employeeList
+                .stream()
+                .collect(Collectors.summarizingInt(e -> e.getAge())).toString();
+
+        System.out.println(age_summary);
+
+        String salary_summary =  employeeList
+                .stream()
+                .collect(Collectors.summarizingDouble(e -> e.getSalary())).toString();
+
+        System.out.println(salary_summary);
+
+        String leave_summary =  employeeList
+                .stream()
+                .collect(Collectors.summarizingLong(e -> e.getDaysLeave())).toString();
+
+        System.out.println(leave_summary);
+
+        Predicate<Employee> salary_filter = e -> e.getSalary() > 100000.5;
+
+        System.out.println(employeeList.stream().filter(salary_filter).collect(Collectors.toList()));
+    }
 
 // ToDo F
 //        1. Do further research on the Streams API
