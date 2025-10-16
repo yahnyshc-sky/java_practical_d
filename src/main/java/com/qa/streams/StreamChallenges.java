@@ -1,5 +1,9 @@
 package com.qa.streams;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class StreamChallenges {
 
 // ToDo A
@@ -7,6 +11,17 @@ public class StreamChallenges {
 //        2. Print the list
 //        3. Using the Streams API calculate the average of the list, otherwise return 0.0
 //        4. Print the average value
+    public static void taskA(){
+        List<Double> nums = new ArrayList<>(List.of(2.5, 9.0, 4.3, 7.5, 2.4));
+
+        nums.stream().forEach(System.out::println);
+
+        Double avg = nums
+                .stream()
+                .collect(Collectors.averagingDouble(d -> d));
+
+        System.out.println("Average value: " + avg);
+    }
 
 // ToDo B
 //        1. Create a list of ints called nums with the values 64, 33, 82, 95, 70, 12, 17, 41, 96
