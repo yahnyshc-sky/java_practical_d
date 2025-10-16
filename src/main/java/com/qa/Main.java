@@ -15,5 +15,6 @@ public class Main {
 //        streamsExampleE();
 
         StreamChallenges.taskA();
+        StreamChallenges.taskB();
     }
 }

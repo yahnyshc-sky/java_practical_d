@@ -31,6 +31,18 @@ public class StreamChallenges {
 //        5. Using the Streams API extract only odd numbers from the list into a new list
 //        6. Print the odd numbers
 
+    public static void taskB(){
+        List<Integer> nums = new ArrayList<>(List.of(64, 33, 82, 95, 70, 12, 17, 41, 96));
+        System.out.println("ORIGINAL LIST");
+        nums.forEach(System.out::println);
+        System.out.println("EVEN LIST");
+        List<Integer> evenList = nums.stream().filter(n -> n % 2 == 0).toList();
+        evenList.forEach(System.out::println);
+        System.out.println("ODD LIST");
+        List<Integer> oddList = nums.stream().filter(n -> n % 2 == 1).toList();
+        oddList.forEach(System.out::println);
+    }
+
 // ToDo C
 //        1. Create a list of ints called nums with the values 64, 33, 82, 95, 70, 82, 70, 41, 33
 //        2. Print the list
