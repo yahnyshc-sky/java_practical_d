@@ -128,6 +128,13 @@ public class StreamChallenges {
         System.out.println("Rest of the cohort");
         cohort1.stream().skip(5).forEach(System.out::println);
         System.out.println(cohort1.stream().count());
+
+        Predicate<String> hasA = str -> str.contains("A");
+        System.out.println("Longest prefix of names that contain A:" +
+                cohort1.stream().sorted().takeWhile(hasA).collect(Collectors.toList()));
+
+        System.out.println(cohort1.stream().findFirst());
+        System.out.println(cohort1.stream().findAny());
     }
 
 }
