@@ -14,10 +14,11 @@ public class Main {
 //        streamsExampleD();
 //        streamsExampleE();
 
-        StreamChallenges.taskA();
-        StreamChallenges.taskB();
-        StreamChallenges.taskC();
-        StreamChallenges.taskD();
-        StreamChallenges.taskE();
+//        StreamChallenges.taskA();
+//        StreamChallenges.taskB();
+//        StreamChallenges.taskC();
+//        StreamChallenges.taskD();
+//        StreamChallenges.taskE();
+        StreamChallenges.taskF();
     }
 }
