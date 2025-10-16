@@ -49,6 +49,15 @@ public class StreamChallenges {
 //        3. Using the Streams API remove duplicates and add the unique values to a new list
 //        4. Print the new unique list
 
+    public static void taskC(){
+        List<Integer> numbers = new ArrayList<>(List.of(64, 33, 82, 95, 70, 82, 70, 41, 33));
+        numbers.forEach(s -> System.out.print(s +" "));
+        List<Integer> uniqueNumbers = numbers.stream().distinct().collect(Collectors.toList());
+        System.out.println("\n Unique List: ");
+        uniqueNumbers.forEach(s -> System.out.print(s +" "));
+
+
+    }
 // ToDo D
 //        1. Create a list of ints called nums with the values 10, 15, 0, 6, 11, -3
 //        2. Print the list
