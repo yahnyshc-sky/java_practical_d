@@ -123,7 +123,11 @@ public class StreamChallenges {
         .map(String::toUpperCase).peek(e -> System.out.println("Mapped Value (2nd Peek): "+ e)).toList();
         // Peek allows you to perform an action on a stream whilst also exposing it to being actioned on by later methods
 
-        
+        System.out.println("First 5 members");
+        cohort1.stream().limit(5).forEach(System.out::println);
+        System.out.println("Rest of the cohort");
+        cohort1.stream().skip(5).forEach(System.out::println);
+        System.out.println(cohort1.stream().count());
     }
 
 }
